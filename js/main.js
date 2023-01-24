@@ -10,6 +10,8 @@ function getFetch(){
         console.log(data)
         document.querySelector('h2').innerText = `Spell Name: ${data.name}`
         document.querySelector('h3').innerText = `Class: ${data.classes[0].name}`
+        document.querySelector('p').innerText = `Description: ${data.desc[0]}`
+        document.querySelector('h4').innerText = `School: ${data.school.name}`
         const ul = document.querySelector('ul')
         ul.innerText = ''
         if(data.subclasses[0] === undefined){
